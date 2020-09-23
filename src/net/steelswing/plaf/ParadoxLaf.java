@@ -146,7 +146,7 @@ public class ParadoxLaf extends BasicLookAndFeel {
 
     @Override
     public String getID() {
-        return "Paradox";
+        return "ParadoxLAF";
     }
 
     @Override
