@@ -151,7 +151,7 @@ public class ParadoxLaf extends BasicLookAndFeel {
 
     @Override
     public String getDescription() {
-        return "Paradox";
+        return "Paradox look and feel";
     }
 
     @Override
