@@ -20,6 +20,7 @@ import net.steelswing.plaf.ui.ParadoxButtonUI;
 import net.steelswing.plaf.ui.ParadoxMenuBarUI;
 import net.steelswing.plaf.ui.ParadoxMenuItemUI;
 import net.steelswing.plaf.ui.ParadoxMenuUI;
+import net.steelswing.plaf.ui.ParadoxOptionPaneUI;
 import net.steelswing.plaf.ui.ParadoxPanelUI;
 import net.steelswing.plaf.ui.ParadoxScrollBarUI;
 import net.steelswing.plaf.ui.ParadoxSeparatorUI;
@@ -79,12 +80,12 @@ public class ParadoxLaf extends BasicLookAndFeel {
             defaults.put("Panel.border", new ParadoxBorderPainter() {
                 @Override
                 public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-                    super.paintBorder(c, g, x, y, width, height);
+//                    super.paintBorder(c, g, x, y, width, height);
                 }
 
                 @Override
                 public Insets getBorderInsets(Component c, Insets insets) {
-                    insets.set(4, 4, 4, 4);
+                    insets.set(1, 1, 1, 1);
                     return insets;
                 }
             });
@@ -130,8 +131,9 @@ public class ParadoxLaf extends BasicLookAndFeel {
             defaults.put("MenuUI", ParadoxMenuUI.class.getCanonicalName());
             defaults.put("ScrollBarUI", ParadoxScrollBarUI.class.getCanonicalName());
             defaults.put("SeparatorUI", ParadoxSeparatorUI.class.getCanonicalName());
-            
-            
+            defaults.put("OptionPaneUI", ParadoxOptionPaneUI.class.getCanonicalName());
+
+            //OptionPaneUI
             return defaults;
         } catch (Exception e) {
             e.printStackTrace();

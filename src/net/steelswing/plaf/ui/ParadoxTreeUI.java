@@ -33,9 +33,12 @@ public class ParadoxTreeUI extends BasicTreeUI {
 
     @Override
     public void paint(Graphics g, JComponent c) {
-        super.paint(g, c);
-        c.setBackground(BASE_BG_COLOR);
-        setHashColor(BASE_BG_COLOR.brighter().brighter());
+        try {
+            super.paint(g, c);
+            c.setBackground(BASE_BG_COLOR);
+            setHashColor(BASE_BG_COLOR.brighter().brighter());
+        } catch (Exception e) {
+        }
     }
 
     @Override
@@ -67,7 +70,7 @@ public class ParadoxTreeUI extends BasicTreeUI {
                 Color bg = BASE_BG_COLOR.brighter().brighter();//UIUtil.getTreeSelectionBackground((this.tree.hasFocus() || Boolean.TRUE.equals(this.tree.getClientProperty("TreeTableTree"))));
 
                 bg = new Color(bg.getRed(), bg.getGreen(), bg.getBlue(), 160);
-                
+
                 rowGraphics.setColor(bg);
                 rowGraphics.fillRect(xOffset, bounds.y, containerWidth, bounds.height);
                 rowGraphics.setColor(bg.brighter());
